@@ -10,17 +10,16 @@ An end-to-end data engineering pipeline that transforms historical Old Bailey co
                 │
                 ▼
        Python Parsing Pipeline
-     ElementTree + Pandas
-                │
-                ▼
-     Transform & Data Validation
+        ElementTree + Pandas
                 │
                 ▼
           Parquet Files
                 │
                 ▼
-          Amazon S3
-        processed / curated
+     Transform & Data Validation
+                │
+                ▼
+            Amazon S3
                 │
                 ▼
           AWS Glue
