@@ -1,0 +1,8 @@
+sessionsPapers/
+output/
+curated/
+
+__pycache__/
+*.pyc
+
+.env
