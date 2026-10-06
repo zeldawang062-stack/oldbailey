@@ -26,6 +26,7 @@ Old Bailey XML
 
 ## Project Structure
 
+```text
 oldbailey/
 ├── parse_xml.py
 ├── extract.py
@@ -40,6 +41,7 @@ oldbailey/
 ├── sessionsPapers/   # raw XML data, not tracked by Git
 ├── output/           # processed Parquet, generated locally
 └── curated/          # cleaned/curated Parquet, generated locally
+```
 
 ## Data Quality & Transformation
 
@@ -106,7 +108,7 @@ The XML source is normalized into six relational tables:
 - `charges`
 - `defendant_punishments`
 `charges` links defendants, offences, and verdicts:
-
+```text
 charges
 ├── charge_id
 ├── targOrder
@@ -120,7 +122,7 @@ defendant_punishments
 ├── targOrder
 ├── defendant_id   → defendants.id
 └── punishment_id  → punishments.id
-
+```
 Because the historical XML contains irregular references and inconsistent identifiers, referential integrity is validated but source inconsistencies are preserved rather than force-corrected.
 
 ## Data Quality Findings
