@@ -77,14 +77,14 @@ The curated datasets are written to `curated/`.
 `upload.py` uploads the curated Parquet datasets to Amazon S3 using `boto3`.
 Each table is stored under its own S3 prefix: s3://old-baily-cases-study/curated/<table_name>/
 
-###4. Catalog
+### 4. Catalog
 crawler.py triggers the AWS Glue crawler oldBailey.
 The crawler scans the curated S3 data and updates the AWS Glue Data Catalog with table schemas and metadata.
 
-###5. Query
+### 5. Query
 Amazon Athena uses the Glue Data Catalog metadata to query the Parquet files directly from S3 using SQL.
 
-###6. Orchestration
+### 6. Orchestration
 pipeline.py runs the local ETL steps in sequence:
 Extract
 → Transform
