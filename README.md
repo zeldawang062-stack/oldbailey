@@ -26,7 +26,6 @@ Old Bailey XML
 
 ## Project Structure
 
-```text
 oldbailey/
 ├── parse_xml.py
 ├── extract.py
@@ -42,11 +41,7 @@ oldbailey/
 ├── output/           # processed Parquet, generated locally
 └── curated/          # cleaned/curated Parquet, generated locally
 
-
-然后再加一个 **Data Quality & Transformation**：
-
-```md
-##Data Quality & Transformation
+## Data Quality & Transformation
 
 The pipeline preserves source inconsistencies instead of silently discarding conflicting records.
 
