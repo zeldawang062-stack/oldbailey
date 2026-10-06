@@ -2,6 +2,34 @@
 
 An end-to-end data engineering pipeline that transforms historical Old Bailey court records from XML into analytics-ready Parquet datasets, uploads curated data to Amazon S3, catalogs the schema with AWS Glue, and enables querying with Amazon Athena.
 
+## Architecture diagram
+
+```text
+          Old Bailey Online
+             TEI-XML
+                │
+                ▼
+       Python Parsing Pipeline
+     ElementTree + Pandas
+                │
+                ▼
+     Transform & Data Validation
+                │
+                ▼
+          Parquet Files
+                │
+                ▼
+          Amazon S3
+        processed / curated
+                │
+                ▼
+          AWS Glue
+       Crawler + Catalog
+                │
+                ▼
+        Amazon Athena
+          SQL Queries
+```
 ## Tech Stack
 
 - Python
